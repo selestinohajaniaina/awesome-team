@@ -1,0 +1,22 @@
+<div class="text-dark">
+    <div class="d-flex">
+        <div class="fw-bold">Decembre 2021</div>
+        <div class="p-4"></div>
+        <div class="fleche">
+            <i class="fs-6 bi-chevron-left border rounded-circle mx-1"></i>
+            <i class="fs-6 bi-chevron-right border rounded-circle mx-1"></i>
+        </div>
+    </div>
+    <div class="d-flex">
+        <div  *ngFor="let mois of month">
+            <span class="px-2 text-primary">
+                {{ mois }}
+            </span>
+            <div class="d-flex flex-column">
+                <span *ngFor="let i of getRange(1, 29)" class="px-2 text-black-50">{{ i }}</span>
+            </div>
+        </div>
+        <div class="d-flex flex-nowrap">
+        </div>
+    </div>
+</div>

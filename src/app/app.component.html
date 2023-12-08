@@ -1,0 +1,223 @@
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+
+      <div class="col-auto px-sm-2 px-0">
+          <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+              <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
+                <i class="fs-4 bi-clipboard-data-fill"></i>
+              </a>
+              <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                  <li class="nav-item">
+                      <a href="#" class="align-middle px-2 btn btn-primary shadow-lg" style="margin-left: -10px;">
+                        <i class="fs-4 bi-grid"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                          <i class="fs-4 bi-list-ul"></i> </a>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link px-0 align-middle">
+                          <i class="fs-4 bi-diagram-2"></i></a>
+                  </li>
+                  <li>
+                      <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                          <i class="fs-4 bi-menu-up"></i></a>
+                  </li>
+              </ul>
+              <hr>
+              <div class="dropdown pb-4">
+                  <a href="#" class="d-flex align-items-center text-primary text-decoration-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fs-2 bi-plus-circle-fill"></i>
+
+                  </a>
+              </div>
+          </div>
+      </div>
+
+      <div class="col py-3 bg-light">
+
+        <nav class="navbar navbar-expand-md navbar-dark ">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <div class="navbar-nav me-auto mb-2 mb-md-0 d-flex flex-column">
+                <div class="d-flex align-items-center">
+                  <h3 class="fw-bold">Awesome Team</h3>
+                  <i class="bi-pencil mx-4"></i>
+                </div>
+                <div>
+                  <span>Perfect Company</span>
+                  <span> | </span>
+                  <span style="padding-left: 10px;">
+                    <img *ngFor="let card of data" src="assets/prf.jpeg" width="20px" height="20px" class="rounded-circle border border-2" style="margin-left: -5px;">
+                  </span>
+                </div>
+              </div>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <img src="assets/prf.jpeg" width="35px" height="35px" class="rounded">
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="d-flex justify-content-around">
+          <div class="card bg-primary text-light border border-0 rounded-4" style="width: fit-content;">
+            <div class="card-body position-relative">
+              <h1 class="card-title fw-bold">78</h1>
+              <i class="fs-5 bi-arrow-up-circle position-absolute" style="top: 25px; right: 25px;"></i>
+              <h6 class="card-subtitle fw-bold">Team Score</h6>
+              <p class="card-text fw-light">This Work</p>
+              <input type="button" value="Score Optimizer" class="btn fw-bold text-light" style="background: rgba(255, 255, 255, 0.418);">
+            </div>
+          </div>
+
+          <div class="card text-dark border border-0 rounded-4" style="width: 22rem;">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h4 class="card-title fw-bold">Activites</h4> <span class="bg-primary text-light px-2 rounded" style="height: fit-content;">41</span>
+                <span class=""><i class="fs-6 bi-clock-history" style="top: 25px; right: 25px;"></i> last acivity</span>
+              </div>
+              <div class="d-flex">
+                <div class="fw-light fs-6 d-flex flex-column acivity-week">
+                  <span>Su</span>
+                  <span>Mo</span>
+                  <span>Tu</span>
+                  <span>We</span>
+                  <span>Th</span>
+                  <span>Fr</span>
+                  <span>Sa</span>
+                </div>
+                <div class="w-100">
+                  <div class="d-flex w-100 justify-content-around acivity-title" style="height: fit-content;">
+                    <h5>35</h5>
+                    <h5>40</h5>
+                    <h5>45</h5>
+                  </div>
+                  <div class="d-flex">
+                    <div *ngFor="let range of getRange(0,22)">
+                      <div class="bg-primary rounded rounded-1" *ngFor="let range of getRange(0,7)" style="width: 12px; height: 12px; margin: 1px; opacity: 0.5;" title="comtribution"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card text-light border border-0 rounded-4" style="width: 22rem;">
+            <div class="card-body position-relative">
+              <div class="d-flex justify-content-between">
+                <h4 class="card-title fw-bold">Overview</h4>
+                <span class=""><i class="fs-6 bi-clock-history" style="top: 25px; right: 25px;"></i> this week</span>
+              </div>
+            </div>
+            <div class="card-body position-relative d-flex justify-content-around">
+
+              <div class="card bg-dark text-light d-flex flex-column justify-content-center align-items-center px-3 rounded-4 shadow" style="width: 30%; margin-top: -30px;">
+                <i class="fs-5 bi-door-open"></i>
+                <h4 class="card-title fw-bold">36</h4>
+                <h6 class="card-subtitle fw-light">Projects</h6>
+              </div>
+
+              <div class="card bg-primary text-light d-flex flex-column justify-content-center align-items-center px-3 rounded-4 shadow" style="width: 30%; margin-top: -30px;">
+                <i class="fs-5 bi-file-check"></i>
+                <h4 class="card-title fw-bold">354</h4>
+                <h6 class="card-subtitle fw-light">Tasks</h6>
+              </div>
+
+              <div class="card text-dark d-flex flex-column justify-content-center align-items-center px-3 rounded-4 shadow" style="width: 30%; margin-top: -30px;">
+                <i class="fs-5 bi-arrow-bar-up"></i>
+                <h4 class="card-title fw-bold">123</h4>
+                <h6 class="card-subtitle fw-light">Desicions</h6>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <h4 class="p-4 fw-bold">Sprint Dashboard</h4>
+        <div class="d-flex justify-content-between px-2">
+          <div>
+            <input type="button" value="all labels" class="btn bg-white form-select px-5 mx-1" style="width: fit-content;">
+            <input type="button" value="2-month periods" class="btn bg-white form-select px-5" style="width: fit-content;">
+          </div>
+          <div class="btn btn-primary shadow shadow-primary">
+            <i class="bi-plus-lg fs-6 fw-bold"></i>
+            Add a sprint</div>
+        </div>
+
+        <div *ngFor="let card of data" class="card p-2 m-1 border-0 d-flex justify-content-between">
+          
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h5 class="m-0">Iron Man</h5>
+              <span style="opacity: 0.5;font-size: 8pt; margin-top: -5px;">
+                Europe Project
+              </span>
+              <span class="badge rounded text-dark bg-secondary" style="opacity: 0.4;transform: scale(0.7);">
+                  2 days left
+                </span>
+            </div>
+            <div class="w-50 d-flex justify-content-between align-items-center">
+                <span style="padding-left: 10px;">
+                  <img *ngFor="let card of data" src="assets/prf.jpeg" width="20px" height="20px" class="rounded-circle border border-2" style="margin-left: -5px;">
+                </span>
+                <span class="badge rounded text-dark" style="opacity: 0.4;">
+                  <i class="fs-8 bi-file-check"></i>
+                    12/20
+                  </span>
+                  <span class="badge rounded text-dark" style="opacity: 0.4;">
+                    <i class="fs-8 bi-arrow-bar-up"></i>
+                      0/3
+                    </span>
+                    <span class="badge rounded text-dark" style="opacity: 0.4;">
+                        <span>2 weeks</span><br>
+                        <span>2.12 - 23.12</span>
+                      </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-auto px-sm-2 px-0 scroll">
+        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+          <!-- calendrier -->
+              <app-calendar></app-calendar>
+            <!-- calendrier/ -->
+            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+              <li *ngFor="let card of data" class="nav-item d-flex align-items-center">
+                <div class="card border border-0 bg-light my-2" style="width: 16rem;">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <span>
+                        <i class="bi-circle-fill fs-6 text-primary"></i> #3
+                      </span>
+                      <span class="fs-6">
+                        Europe Project
+                      </span>
+                    </div>
+                    <p class="fw-bold">Create a Prototype for the mobile App for Get Notifications in Principale</p>
+                    <div class="d-flex align-items-center justify-content-between ">
+                        <span class="badge rounded text-bg-danger">
+                        <i class="fs-8 bi-stopwatch"></i>
+                          Dec 1
+                        </span>
+                          <span class="d-flex align-items-center justify-content-between w-50">
+                            <span class="fw-light">
+                              <i class="bi-chat-square-text"></i> 3
+                            </span>
+                            <span>
+                              <img src="assets/prf.jpeg" width="20px" height="20px" class="rounded-circle">
+                            </span>
+                          </span>
+                    </div>
+                  </div>
+                </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+</div>
